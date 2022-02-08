@@ -1,13 +1,18 @@
-var formEl = document.querySelector("#task-form"); 
-var tasksToDoEl = document.querySelector("#tasks-to-do"); 
-
-var createTaskHandler = function(event) { 
+//alert("js is reached");
+var tasksToDoEl = document.querySelector("#tasks-to-do");
+var start = function(event) { 
   event.preventDefault(); 
+  alert("click is seen");
+  tasksToDoEl.textContent = "59";
+  for (let i =0; i<100; 1++)
+  {
+    setTimeout(i);
+  }
+    setTimeout(function(i) { tasksToDoEl.textContent = (i) }, 1000);
 
-  var listItemEl = document.createElement("li"); 
-  listItemEl.className = "task-item"; 
-  listItemEl.textContent = "This is a new task."; 
-  tasksToDoEl.appendChild(listItemEl); 
-  }; 
+}; 
 
-  formEl.addEventListener("submit", createTaskHandler);
+
+  startBtn.addEventListener("click", start);
+
+  
